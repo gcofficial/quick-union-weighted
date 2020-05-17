@@ -55,17 +55,6 @@ function start () {
   const bottom = y < blocksLength - 1 ? getBlockIndex(x, y + 1) : size
   const top = y > 0 ? getBlockIndex(x, y - 1) : -1
   const sides = [left, right, bottom, top]
-
-
-  console.log({
-    current: rndIndex,
-    left,
-    right,
-    bottom,
-    top,
-    x,
-    y
-  })
   sides.forEach(
     index => {
       if (filledPercolations[index] === true) {
